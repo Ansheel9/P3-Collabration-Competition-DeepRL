@@ -57,4 +57,4 @@ To train the agent, start jupyter notebook, open <code> Tennis.ipynb </code> and
 
 Plot showing the average score over 100 episode.
 
-![](https://github.com/Ansheel9/P3-Collabration-Competition-DeepRL/blob/master/Images/plot.png)
+![](https://github.com/Ansheel9/P3-Collabration-Competition-DeepRL/blob/master/Images/plot.PNG)
