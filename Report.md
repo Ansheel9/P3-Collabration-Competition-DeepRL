@@ -1,8 +1,3 @@
----
-title: 'Report'
-disqus: Ansheel Banthia
----
-
 Project 3 - Collabration & Competition
 ===
 
@@ -12,8 +7,13 @@ Udacity Deep Reinforcement Learning Nanodegree
 
 ## Table of Contents
 
-[TOC]
+[ Summary ](#sum)
+[ Learning Algorithm ](#algo)
+[ Result ](#res)
+[ Ideas of Future Work ](#fut)
 
+
+<a name="sum"></a>
 ## Summary
 
 The project is based on Unity Environment. The agent is trained to play tennis in multi-agent environment!
@@ -28,6 +28,7 @@ The task is episodic, and in order to solve the environment, your agents must ge
 
 The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
+<a name="algo"></a>
 Learning Algorithm
 ---
 
@@ -65,15 +66,17 @@ Parameters used in MADDPG algorithm:
 - Noise Decay Rate: 1.0
 - Weight Decay: 0
 
+<a name="res"></a>
 Result
 ---
 
 Here is a plot that shows the score over the episodes, as the agent is trained.
 
-![](plot.png)
+![](https://github.com/Ansheel9/P3-Collabration-Competition-DeepRL/blob/master/Images/plot.PNG)
 
 The environment was solved in 3293 episodes, achieving an average score of 0.50 over the past 100 episodes.
 
+<a name="fut"></a>
 Ideas of Future Work
 ---
 
