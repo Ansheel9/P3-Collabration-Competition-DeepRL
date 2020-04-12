@@ -1,7 +1,3 @@
----
-title: 'README'
----
-
 # Train a pair of ML-Agents to play Tennis :tennis:
 
 ---
@@ -18,7 +14,7 @@ The project is based on Unity Environment. The Agent is trained to play tennis i
 
 | Before Training | After Training |
 | :---: | :---: |
-| ![](BT.gif =600x300) | ![](AT.gif =600x300) |
+| ![](https://github.com/Ansheel9/P3-Collabration-Competition-DeepRL/blob/master/Images/BT.gif) | ![](https://github.com/Ansheel9/P3-Collabration-Competition-DeepRL/blob/master/Images/AT.gif) |
 
 In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
@@ -61,4 +57,4 @@ To train the agent, start jupyter notebook, open <code> Tennis.ipynb </code> and
 
 Plot showing the average score over 100 episode.
 
-![](plot.png)
+![](https://github.com/Ansheel9/P3-Collabration-Competition-DeepRL/blob/master/Images/plot.png)
