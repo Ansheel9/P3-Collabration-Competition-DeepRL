@@ -7,10 +7,10 @@ Udacity Deep Reinforcement Learning Nanodegree
 
 ## Table of Contents
 
-[ Summary ](#sum)
-[ Learning Algorithm ](#algo)
-[ Result ](#res)
-[ Ideas of Future Work ](#fut)
+ - [ Summary ](#sum)
+ - [ Learning Algorithm ](#algo)
+ - [ Result ](#res)
+ - [ Ideas of Future Work ](#fut)
 
 
 <a name="sum"></a>
