@@ -30,6 +30,7 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ## Getting Started
 
+### Environment
 1. Download the environment from one of the links below. You need only select the environment that matches your operating system:
 
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
@@ -44,6 +45,17 @@ The environment is considered solved, when the average (over 100 episodes) of th
 2. Place the file in the DRLND GitHub repository, in the 'p3_collab-compet/' folder, and unzip (or decompress) the file.
 
 3. Install conda environment with  <code> conda env create -f environment.yml </code>
+
+### Dependencies
+ 
+ - Create (and activate) a new environment with Python.\
+ <code> conda create --name drlnd </code>\
+ <code> activate drlnd </code>
+ 
+ - Install Pytorch by following the instructions in [this link.](https://pytorch.org/get-started/locally/)
+ 
+ - Other dependencies required for this program are listed in the <code> requirements.txt </code> file so that you can install them using the following command:\
+ <code> pip install requirements.txt </code>
 
 ---
 
