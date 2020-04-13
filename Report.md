@@ -50,12 +50,10 @@ Techniques which I have used in my MADDPG algorithm which contributed significan
 - Fixed Q-target: 2 different networks are combined in order to keep the method off-policy. A target network is updated at every iteration while an evalution network at the end of updating phase.
 - Experience Replay: In order to decouple sequential states of each episode, Replay buffer <S,a,R,S'> is created. At each iteration a random batch is pulled from buffer. In this Multi Agent algorithm, multiple Agents are instantiated together, where each of them sample experience events from the same Replay Buffer. The Environment returns states for multiple agents, and each is used to update and take an action on from the individual agents.
 - Soft Updates: In DQN, the target networks are updated by copying all the weights from the local networks after a certain number of epochs. However, in DDPG, the target networks are updated using soft updates where during each update step, 0.01% of the local network weights are mixed with the target networks weights.
- - Discount: With discounting, we weigh the rewards in future less than the ones in the nearere future. The discounting factor gamma has been chosen to be 0.99 in this case.
- 
+- Noise: In this MADDPG algorithm, noise is added to improve generalization error and to improve the structure of the mapping problem is to add random noise. Adding noise means that the network is less able to memorize training samples because they are changing all of the time, resulting in smaller network weights and a more robust network that has lower generalization error.
+- Discount: With discounting, we weigh the rewards in future less than the ones in the nearere future. The discounting factor gamma has been chosen to be 0.99 in this case.
 
-I used Linear Neural Network architecture. Also, in my experience, I have found Batch normalization to have always improved training and hence, I added Batch normalization layer in both actor and critic.
-
-Parameters used in MADDPG algorithm:
+After experimenting with several parameters, the best performing parameters used in MADDPG algorithm are listed below:
 - Maximum steps per episode: 1000
 - Batch Size: 256
 - Buffer size: 1e4
@@ -66,6 +64,8 @@ Parameters used in MADDPG algorithm:
 - Initial Noise Weighting Factor: 0.5
 - Noise Decay Rate: 1.0
 - Weight Decay: 0
+
+I used Linear Neural Network architecture. Also, in my experience, I have found Batch normalization to have always improved training and hence, I added Batch normalization layer in both actor and critic.
 
 <a name="res"></a>
 Result
