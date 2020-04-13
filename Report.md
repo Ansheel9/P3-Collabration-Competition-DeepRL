@@ -46,11 +46,12 @@ For the DDPG foundation, I used vanilla, single-agent DDPG as a template. Then, 
 
 Actor-critic methods leverage the strengths of both policy-based and value-based methods. Using a policy-based approach, the agent (actor) learns how to act by directly estimating the optimal policy and maximizing reward through gradient ascent. Meanwhile, employing a value-based approach, the agent (critic) learns how to estimate the value (i.e., the future cumulative reward) of different state-action pairs. Actor-critic methods combine these two approaches in order to accelerate the learning process. Actor-critic agents are also more stable than value-based agents, while requiring fewer training samples than policy-based agents.
 
-
-There are also a few techniques which contributed significantly towards stabilizing the training:
+Techniques which I have used in my MADDPG algorithm which contributed significantly towards stabilizing the training:
 - Fixed Q-target: 2 different networks are combined in order to keep the method off-policy. A target network is updated at every iteration while an evalution network at the end of updating phase.
-- Experience Replay: In order to decouple sequential states of each episode, Replay buffer <S,a,R,S'> is created. At each iteration a random batch is pulled from buffer.
+- Experience Replay: In order to decouple sequential states of each episode, Replay buffer <S,a,R,S'> is created. At each iteration a random batch is pulled from buffer. In this Multi Agent algorithm, multiple Agents are instantiated together, where each of them sample experience events from the same Replay Buffer. The Environment returns states for multiple agents, and each is used to update and take an action on from the individual agents.
 - Soft Updates: In DQN, the target networks are updated by copying all the weights from the local networks after a certain number of epochs. However, in DDPG, the target networks are updated using soft updates where during each update step, 0.01% of the local network weights are mixed with the target networks weights.
+ - Discount: With discounting, we weigh the rewards in future less than the ones in the nearere future. The discounting factor gamma has been chosen to be 0.99 in this case.
+ 
 
 I used Linear Neural Network architecture. Also, in my experience, I have found Batch normalization to have always improved training and hence, I added Batch normalization layer in both actor and critic.
 
