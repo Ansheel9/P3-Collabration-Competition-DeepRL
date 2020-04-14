@@ -65,6 +65,24 @@ After experimenting with several parameters, the best performing parameters used
 - Noise Decay Rate: 1.0
 - Weight Decay: 0
 
+The Models used for training are:
+
+| Actor Model Layer | Shape |
+| ------------- | ------------- |
+| Input Layer  | _24_ x 256  |
+| BatchNorm Layer  | 256  |
+| Hidden Layer  | 256 x 256  |
+| Output Layer | 256 x _2_ |
+
+| Critic Model Layer | Shape |
+| ------------- | ------------- |
+| Input Layer  | _24_ x 256  |
+| BatchNorm Layer  | 256  |
+| Hidden Layer  | 256 x 256  |
+| Output Layer | 256 x _1_ |
+
+The Input shape is number of states, _24_, and output is actions for agents being trained, _2_.
+
 I used Linear Neural Network architecture. Also, in my experience, I have found Batch normalization to have always improved training and hence, I added Batch normalization layer in both actor and critic.
 
 <a name="res"></a>
