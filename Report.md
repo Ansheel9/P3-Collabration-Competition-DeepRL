@@ -67,14 +67,14 @@ After experimenting with several parameters, the best performing parameters used
 
 The Models used for training are:
 
-| Actor Model Layer | Shape |
+| Actor Model Network | Shape |
 | ------------- | ------------- |
 | Input Layer  | _24_ x 256  |
 | BatchNorm Layer  | 256  |
 | Hidden Layer  | 256 x 256  |
 | Output Layer | 256 x _2_ |
 
-| Critic Model Layer | Shape |
+| Critic Model Network | Shape |
 | ------------- | ------------- |
 | Input Layer  | _24_ x 256  |
 | BatchNorm Layer  | 256  |
